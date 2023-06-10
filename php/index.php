@@ -48,6 +48,15 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                 </ul>
             </div>
         </div>
+        <div id="theSwitch">
+            <div class="switchContainer">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label class="switch" for="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <p class="component-title">Logged Out</p>
+        </div>
     </nav>
 
     <div id="pop1">

@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($num>0){
     session_start();
     $_SESSION['loggedin'] = true;
-    $_SESSION['email'] = $email;
+    // $_SESSION['email'] = $email;
     header("location: index.php");
     }
     else{

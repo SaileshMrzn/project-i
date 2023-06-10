@@ -22,8 +22,8 @@ if (cont4 != null) {
 }
 
 home.onclick = () => {
-  // window.scrollTo({ top: 0, behavior: "smooth" });
-  window.location.href = "index.html";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.location.href = "index.html";
 };
 
 openPopups.forEach((button) => {
@@ -50,6 +50,27 @@ overlay.addEventListener("click", () => {
     p.classList.remove("active");
   });
 });
+
+let tSwitch = () => {
+  if (
+    window.location.href.includes(
+      "index.php",
+      "appointment.html",
+      "doctors.html"
+    )
+  ) {
+    document.querySelector(".checkbox").checked = true;
+    document.querySelector(".component-title").innerHTML = "Logged In";
+  }
+  document.querySelector(".checkbox").addEventListener("click", () => {
+    let confirmval = confirm("Are you sure you want to log out?");
+    if (confirmval == true) {
+      window.location.href = "../php/login.php";
+    }
+  });
+};
+
+tSwitch();
 
 // ------------------------------------------------------------
 // ---------------------- DOCTOR PAGE -------------------------
