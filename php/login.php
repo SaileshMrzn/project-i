@@ -22,8 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,17 +29,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style3.css">
     <title>Hospital Management System - Login</title>
 </head>
 
 <body>
-    <?php 
-    require '../components/nav-mod.html';
-    if($showError){
-    echo
-        '<div class="error">'.$showError.'</div>';
-    }
-    ?>
+    <?php require '../components/nav-mod.html' ?>
+
+    <div id="message" style="height: 50px; background:#abc9ff">
+        <?php
+            if($showError){
+            echo
+                '<div class="error">'.$showError.'</div>';
+            }
+        ?>
+    </div>
+
     <div class="main">
         <form id="login" action="login.php" method="post">
             <div id="top">
@@ -67,76 +70,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </form>
     </div>
-
-    <style>
-    .main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #abc9ff;
-        height: 45rem;
-    }
-
-    #top {
-        text-align: center;
-        font-weight: 500;
-    }
-
-    #login {
-        width: 21rem;
-        height: 23.5rem;
-        background: white;
-        border-radius: 10px;
-        padding: 15px 0;
-    }
-
-    #bod {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .inp {
-        width: 65%;
-        padding: 10px 0;
-    }
-
-    #bod button {
-        width: 5rem;
-        height: 2rem;
-        border-radius: 10px;
-        border: none;
-        margin-top: 10px;
-    }
-
-    #bod button:hover {
-        background-color: #e15f97;
-        color: white;
-        transition: all 0.25s ease;
-        cursor: pointer;
-    }
-
-    #bod input {
-        border-radius: 10px;
-        border: 1px solid grey;
-        height: 2rem;
-        width: 100%;
-        margin-top: 10px;
-        padding: 10px;
-        font-size: 13px;
-    }
-
-    .error {
-        height: 3.5rem;
-        background: #FFF3A2;
-        color: black;
-        display: flex;
-        align-items: center;
-        padding: 10px;
-    }
-    </style>
 
     <script>
     // const alert = document.querySelector(".alert");

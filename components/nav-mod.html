@@ -18,9 +18,7 @@
     <nav class="navbar">
       <div class="container flex">
         <div class="left">
-          <a href="../php/index.php"
-            ><img src="../images/final.png" alt="" srcset=""
-          /></a>
+          <a href=""><img src="../images/final.png" alt="" srcset="" /></a>
         </div>
 
         <div class="right">
@@ -43,7 +41,12 @@
       </div>
       <div id="theSwitch">
         <div class="switchContainer">
-          <input type="checkbox" class="checkbox" id="checkbox" />
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="checkbox"
+            onclick="err()"
+          />
           <label class="switch" for="checkbox">
             <span class="slider"></span>
           </label>
@@ -174,6 +177,7 @@
     <script>
       function err() {
         alert("Please login first");
+        document.querySelector("#checkbox").checked = false;
       }
     </script>
   </body>

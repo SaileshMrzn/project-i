@@ -18,11 +18,13 @@ if (startButton != null) {
 if (cont4 != null) {
   services.onclick = () => {
     cont4.scrollIntoView({ behavior: "smooth" });
+    console.log("clicked");
   };
 }
 
 home.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+  console.log("clicked");
   // window.location.href = "index.html";
 };
 
@@ -51,34 +53,13 @@ overlay.addEventListener("click", () => {
   });
 });
 
-let tSwitch = () => {
-  if (
-    window.location.href.includes(
-      "index.php",
-      "appointment.html",
-      "doctors.html"
-    )
-  ) {
-    document.querySelector(".checkbox").checked = true;
-    document.querySelector(".component-title").innerHTML = "Logged In";
-  }
-  document.querySelector(".checkbox").addEventListener("click", () => {
-    let confirmval = confirm("Are you sure you want to log out?");
-    if (confirmval == true) {
-      window.location.href = "../php/login.php";
-    }
-  });
-};
-
-tSwitch();
-
 // ------------------------------------------------------------
 // ---------------------- DOCTOR PAGE -------------------------
 
-let btn = document.querySelectorAll("#docContainer .doc button");
+// let bookBtn = document.querySelectorAll("#docContainer .doc .book");
 
-btn.forEach((button) => {
-  button.addEventListener("click", () => {
-    window.location.href = "../html/appointment.html";
-  });
-});
+// bookBtn.forEach((b) => {
+//   b.addEventListener("click", () => {
+//     window.location.href = "../php/appointment.php";
+//   });
+// });

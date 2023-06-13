@@ -1,8 +1,10 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-  header("location:login.php");
+if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
+    $login=true;
+}else{
+  header("location: login.php");
 }
 
 ?>
@@ -27,7 +29,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     <nav class="navbar">
         <div class="container flex">
             <div class="left">
-                <a href="../php/index.php"><img src="../images/final.png" alt="" srcset="" /></a>
+                <a href=""><img src="../images/final.png" alt="" srcset="" /></a>
             </div>
 
             <div class="right">
@@ -36,8 +38,8 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                     <li id="services">
                         Services
                         <div class="dropdown">
-                            <a href="../html/appointment.html">Appoinment Management</a>
-                            <a href="../html/doctors.html">Doctors</a>
+                            <a href="../php/appointment.php">Appoinment Management</a>
+                            <a href="../php/doctors.php">Doctors</a>
                             <a href="">Medical Records</a>
                             <a href="">Pharmacy</a>
                         </div>
@@ -48,6 +50,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                 </ul>
             </div>
         </div>
+
         <div id="theSwitch">
             <div class="switchContainer">
                 <input type="checkbox" class="checkbox" id="checkbox" />
@@ -181,7 +184,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
     <div class="container4 border">
 
-        <a href="../html/appointment.html" style="text-decoration: none; color: black">
+        <a href="../php/appointment.php" style="text-decoration: none; color: black">
             <div class="minicontainer border">
                 <i class="fa-solid fa-calendar-check fa-2xl"></i>
                 <h3 style="font-weight: 500">Appoinment Management</h3>
@@ -192,7 +195,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
             </div>
         </a>
 
-        <a href="../html/doctors.html" style="text-decoration: none; color: black">
+        <a href="../php/doctors.php" style="text-decoration: none; color: black">
             <div class="minicontainer border">
                 <i class="fa-solid fa-user-doctor fa-2xl"></i>
                 <h3 style="font-weight: 500">Doctors</h3>
@@ -249,6 +252,28 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
     </div>
 
+
+    <?php
+    if($login){
+        echo'
+        <script>
+        document.querySelector(".checkbox").checked = true;
+        document.querySelector(".component-title").innerHTML = "Logged In";
+
+        document.querySelector(".checkbox").addEventListener("click", () => {
+        let confirmval = confirm("Are you sure you want to log out?");
+        if (confirmval == true) {
+            window.location.href = "../php/logout.php";
+        } else {
+            document.querySelector(".checkbox").checked = true;
+        }
+        });
+        </script>';
+    }
+
+    ?>
+
+    </script>
     <script src="../js/script.js"></script>
     <script src="https://kit.fontawesome.com/e87b42cfc1.js" crossorigin="anonymous"></script>
 </body>
