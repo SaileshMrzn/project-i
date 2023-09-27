@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Dr. Ramesh Kumar",
+    "gender": "male",
+    "qualification": "MBBS, MD",
+    "specialization": "Dermatologist",
+    "experience": "10 years",
+    "availability": "Mon - Sat (10:00 AM - 6:00 PM)",
+    "url": "../images/doctors/rameshkumar.png"
+  },
+  {
+    "name": "Dr. Niketa Shrestha",
+    "gender": "Female",
+    "qualification": "MBBS, MD",
+    "specialization": "Pediatrician",
+    "experience": "9 years",
+    "availability": "Mon - Thu (11:00 AM - 5:00 PM)",
+    "url": "../images/doctors/niketa.png"
+  },
+  {
+    "name": "Dr. Wemba Martin",
+    "gender": "Male",
+    "qualification": "MBBS, MD",
+    "specialization": "Physician",
+    "experience": "7 years",
+    "availability": "Mon - Sat (10:00 AM - 3:00 PM)",
+    "url": "../images/doctors/wemba-martin.png"
+  },
+  {
+    "name": "Dr. Sushil Derek",
+    "gender": "Male",
+    "qualification": "DNB",
+    "specialization": "Maternal and Child Health",
+    "experience": "15 years",
+    "availability": "Wed - Fri (12:00 PM - 6:00 PM)",
+    "url": "../images/doctors/sushilderek.png"
+  },
+  {
+    "name": "Dr. Bhavana Madhavi",
+    "gender": "Female",
+    "qualification": "DNB",
+    "specialization": "Opthalmologist",
+    "experience": "10 years",
+    "availability": "Tue - Fri (10:00 AM - 5:00 PM)",
+    "url": "../images/doctors/bhavana.png"
+  },
+  {
+    "name": "Dr. Nitin Ashok",
+    "gender": "Male",
+    "qualification": "MBBS, MD",
+    "specialization": "Cardiologist",
+    "experience": "15 years",
+    "availability": "Mon - Wed (10:00 AM - 6:00 PM)",
+    "url": "../images/doctors/nitin.png"
+  }
+]
