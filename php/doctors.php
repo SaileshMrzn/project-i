@@ -23,47 +23,52 @@
         </div>
         <div class="a_body">
             <div class="docList">
-                <div class="doc" id="doc">
-                    <div class="docImg" id="image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeLJnzgcw-0NEcuH0joPa1I_-MCWg-yJ_v1FrDzT8&s"
-                            alt="" />
-                    </div>
-                    <div class="docInfo">
-                        <h3 id="name">Dr. Aman Shahi</h3>
-                        <p id="degree">MBBS, MD</p>
-                        <p id="speciality">Cardiologist</p>
-                        <p id="experience">10 years of experience</p>
-                        <p id="availability">9:00 AM to 5:00 PM (Tue,Thu)</p>
-                    </div>
-                    <div class="book"><button>Book Appointment</button></div>
-                </div>
-
-                <div class="doc">
-                    <div class="docImg" id="image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeLJnzgcw-0NEcuH0joPa1I_-MCWg-yJ_v1FrDzT8&s"
-                            alt="" />
-                    </div>
-                    <div class="docInfo">
-                        <h3 id="name">Dr. Aman Shahi</h3>
-                        <p id="degree">MBBS, MD</p>
-                        <p id="speciality">Cardiologist</p>
-                        <p id="experience">10 years of experience</p>
-                        <p id="availability">9:00 AM to 5:00 PM (Tue,Thu)</p>
-                    </div>
-                    <div class="book"><button>Book Appointment</button></div>
+                <div class="docInfo">
+                    <span class="docImage"></span>
                 </div>
             </div>
         </div>
     </div>
-
     <script>
-    let bookBtn = document.querySelectorAll("#docContainer .doc .book");
+    let docInfoContainer = document.querySelector(".docInfo");
+    fetch("../doc-list.json")
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(item => {
+                let itemElement = document.createElement("div");
+                let imageElement = document.createElement("div");
+                itemElement.classList.add("doc");
+                imageElement.classList.add("docImg");
 
-    bookBtn.forEach((b) => {
-        b.addEventListener("click", () => {
-            window.location.href = "../php/appointment.php";
+                imageElement.innerHTML = `
+                                <img src="${item.url}" alt="Doctor Image" style="height:150px; width:150px;">
+                `;
+
+                itemElement.innerHTML = `
+                            <div class="the_doctors">
+                            <h3 id="name">${item.name}</h3>
+                            <p id="degree">${item.qualification}</p>
+                            <p id="speciality">${item.specialization}</p>
+                            <p id="experience">${item.experience} of experience</p>
+                            <p id="availability">${item.availability}</p>
+                            <div class="book"><button>Book Appointment</button></div>
+                            </div>
+                `;
+
+                docInfoContainer.appendChild(itemElement);
+                itemElement.appendChild(imageElement);
+
+                let bookBtn = document.querySelectorAll(".book");
+                bookBtn.forEach((b) => {
+                    b.addEventListener("click", () => {
+                        window.location.href = "../php/appointment.php";
+                    });
+                });
+            });
+        })
+        .catch(error => {
+            console.error("Error fetching JSON data:", error);
         });
-    });
     </script>
 </body>
 

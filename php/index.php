@@ -168,7 +168,6 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
     </div>
 
     <div class="container3 border">
-        <!-- <p class="intro" style="font-weight: 500; font-size: 20px;">Introduction</p> -->
         <h2 class="intro" style="font-weight: 500">Introduction</h2>
         <p class="border">
             Our hospital management system, AS Care is a web-based application that
@@ -219,7 +218,7 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
             </div>
         </a>
 
-        <a href="appointment.html" style="text-decoration: none; color: black">
+        <a href="../php/pharmacy.php" style="text-decoration: none; color: black">
             <div class="minicontainer border">
                 <i class="fa-solid fa-pills fa-2xl"></i>
                 <h3 style="font-weight: 500">Pharmacy</h3>
@@ -251,7 +250,6 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
         </div>
 
     </div>
-
 
     <?php
     if($login){
