@@ -142,8 +142,12 @@
                         <label for="docs">Doctor:</label>
                         <select name="docs" id="docs">
                             <option value="Male">Select doctor</option>
-                            <option value="Male">Dr. Aman Shahi</option>
-                            <option value="Female">Dr. Aman Shahi</option>
+                            <option value="Male">Dr. Ramesh Kumar (Dermatologist)</option>
+                            <option value="Female">Dr. Niketa Shrestha (Pediatrician)</option>
+                            <option value="Female">Dr. Wemba Martin (Physician)</option>
+                            <option value="Female">Dr. Sushil Derek (Maternal and Child Health)</option>
+                            <option value="Female">Dr. Bhavana Madhavi (Opthalmologist)</option>
+                            <option value="Female">Dr. Nitin Ashok (Cardiologist)</option>
                         </select>
                     </div>
 

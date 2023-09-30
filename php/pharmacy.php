@@ -14,12 +14,12 @@
     <title>Hospital Management System</title>
 </head>
 
-<body style="overflow-y: scroll">
+<body style="overflow-y: hidden">
     <?php require '../components/nav.html' ?>
 
-    <div id="docContainer">
+    <div id="pContainer">
         <div class="a_head">
-            <h2 style="font-weight: 500">Pharmacy</h2>
+            <h2 style="font-weight: 500">AS Pharmacy</h2>
         </div>
         <div class="p_body">
             <div class="p_content">

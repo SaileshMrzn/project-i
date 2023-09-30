@@ -40,8 +40,7 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
                         <div class="dropdown">
                             <a href="../php/appointment.php">Appoinment Management</a>
                             <a href="../php/doctors.php">Doctors</a>
-                            <a href="">Medical Records</a>
-                            <a href="">Pharmacy</a>
+                            <a href="../php/pharmacy.php">Pharmacy</a>
                         </div>
                     </li>
                     <li id="about" data-open="#aboutContent">About</li>
@@ -100,9 +99,9 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
                 <p>
                     Leave us your queries below <br />
                     <a
-                        href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZBLBjtWkJvVdGNnTxWNvVsjHWWNmfvFDRvZbCgdKJvhRBXcdZBCsJRHbzjthqpMQlQnvW">shailesh.mrzn@gmail.com</a><br />
+                        href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZBLBjtWkJvVdGNnTxWNvVsjHWWNmfvFDRvZbCgdKJvhRBXcdZBCsJRHbzjthqpMQlQnvW">support.ascare@gmail.com</a><br />
                     Or call us at <br />
-                    <a href="" style="text-decoration: none">+977-9840510225</a>
+                    <a href="" style="text-decoration: none">16600186430</a>
                 </p>
                 <p>We will be happy to help you.</p>
             </div>
@@ -170,14 +169,11 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
     <div class="container3 border">
         <h2 class="intro" style="font-weight: 500">Introduction</h2>
         <p class="border">
-            Our hospital management system, AS Care is a web-based application that
-            helps in facilitating the functioning of hospitals and providing basic
-            medical services. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Asperiores, exercitationem natus? Officiis eligendi facilis nulla,
-            reprehenderit dolore fugit quibusdam alias id culpa officia. Harum sed
-            impedit optio architecto in vitae molestiae tempore quod dicta nesciunt
-            aliquam esse sunt, cumque corporis vel pariatur deserunt neque hic et
-            consequuntur reprehenderit. Pariatur, officiis!
+            Our hospital management system, AS Care is a web-based application that helps in facilitating the
+            functioning of hospitals. It streamlines and integrates the operations, processes and information flow in
+            hospitals and
+            is designed to manage all the aspects of hospitals in a single platform. It combines all the information
+            related to patients, doctors, staff, hospital administration into one application.
         </p>
     </div>
 
@@ -206,10 +202,10 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
             </div>
         </a>
 
-        <a href="appointment.html" style="text-decoration: none; color: black">
+        <a href="../php/pharmacy.php" style="text-decoration: none; color: black">
             <div class="minicontainer border">
-                <i class="fa-solid fa-file-medical fa-2xl"></i>
-                <h3 style="font-weight: 500">Medical Records</h3>
+                <i class="fa-solid fa-pills fa-2xl"></i>
+                <h3 style="font-weight: 500">Pharmacy</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
                     repellat quae maxime saepe repellendus soluta ducimus necessitatibus
@@ -218,10 +214,10 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
             </div>
         </a>
 
-        <a href="../php/pharmacy.php" style="text-decoration: none; color: black">
+        <a href="" style="text-decoration: none; color: black">
             <div class="minicontainer border">
-                <i class="fa-solid fa-pills fa-2xl"></i>
-                <h3 style="font-weight: 500">Pharmacy</h3>
+                <i class="fa-solid fa-file-medical fa-2xl"></i>
+                <h3 style="font-weight: 500">Medical records</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
                     at vitae suscipit consectetur voluptatum!
@@ -230,8 +226,8 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
         </a>
 
         <div class="minicontainer border">
-            <i class="fa-regular fa-calendar-check fa-2xl"></i>
-            <h3 style="font-weight: 500">Appoinment Management</h3>
+            <i class="fa-solid fa-money-check-dollar fa-2xl"></i>
+            <h3 style="font-weight: 500">Billings</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
                 repellat quae maxime saepe repellendus soluta ducimus necessitatibus
@@ -240,8 +236,8 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
         </div>
 
         <div class="minicontainer border">
-            <i class="fa-regular fa-calendar-check fa-2xl"></i>
-            <h3 style="font-weight: 500">Appoinment Management</h3>
+            <i class="fa-solid fa-bed fa-2xl"></i>
+            <h3 style="font-weight: 500">Bed Management system</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
                 repellat quae maxime saepe repellendus soluta ducimus necessitatibus
