@@ -185,8 +185,8 @@
 }
 
 #aboutContent {
-  height: 43rem;
-  min-width: 37rem;
+  height: 37rem;
+  min-width: 35rem;
   position: fixed;
   width: 30px;
   background-color: white;
@@ -210,7 +210,7 @@
 }
 
 #contactContent {
-  height: 43rem;
+  height: 37rem;
   min-width: 35rem;
   position: fixed;
   width: 30px;
@@ -235,8 +235,8 @@
 }
 
 #supportContent {
-  height: 43rem;
-  min-width: 38rem;
+  height: 37rem;
+  min-width: 35rem;
   position: fixed;
   width: 30px;
   background-color: white;

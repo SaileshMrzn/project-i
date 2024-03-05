@@ -8,17 +8,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
     $result = mysqli_query($con, $sql);
     $num = mysqli_num_rows($result);
-    // echo $num;
+    $row = mysqli_fetch_assoc($result);
 
-    if($num>0){
     session_start();
-    $_SESSION['loggedin'] = true;
-    // $_SESSION['email'] = $email;
-    header("location: index.php");
+if ($row && isset($row['user_type'])) {
+    if ($row['user_type'] == "user") {
+        $_SESSION['user_loggedin'] = true;
+        header("location: index.php");
+        exit();
+    } else if ($row['user_type'] == "admin") {
+        $_SESSION['admin_loggedin'] = true;
+        header("location: admin.php");
+        exit();
+    } else {
+        $showError = "Invalid Credentials";
     }
-    else{
-        $showError="Invalid Credentials";
-    }
+} else {
+    $showError = "Invalid Credentials"; 
+}
 }
 ?>
 

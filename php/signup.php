@@ -6,6 +6,7 @@
         $email = $_POST["em"];
         $password = $_POST["pw"];
         $cpassword = $_POST["cpw"];
+        $utype = $_POST["type"];
         
         $sqlchk = "SELECT * FROM users WHERE email = '$email'";
         $resultchk = mysqli_query($con, $sqlchk);
@@ -14,7 +15,7 @@
             $showError = "Email already exists";
         }else{   
             if(!empty($password) && !empty($email) && $password == $cpassword){
-                $sql = "INSERT INTO `users` (`email`, `password`) VALUES ('$email', '$password')";
+                $sql = "INSERT INTO `users` (`email`, `password`, `user_type`) VALUES ('$email', '$password', '$utype')";
                 $result = mysqli_query($con, $sql);
                 $showAlert = "Signed up successfully.";
             }else if(empty($password) || empty($cpassword) || empty($email)){
@@ -69,6 +70,14 @@
                     <div class="inp">
                         <label for="pw">Confirm Password:</label> <br>
                         <input type="password" name="cpw" id="cpw">
+                    </div>
+
+                    <div class="inp">
+                        <label for="type">User type:</label> <br>
+                        <select name="type" id="type">
+                            <option value="user">user</option>
+                            <option value="admin">admin</option>
+                        </select>
                     </div>
                     <button type="submit" name="submit" id="submit">Signup</button>
                     <p style="margin-top:10px;font-weight:400;text-align:center" class="inp">

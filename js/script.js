@@ -23,9 +23,8 @@ if (cont4 != null) {
 }
 
 home.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  console.log("clicked");
-  // window.location.href = "index.html";
+  // window.scrollTo({ top: 0, behavior: "smooth" });
+  window.location.href = "index.php";
 };
 
 openPopups.forEach((button) => {

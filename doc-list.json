@@ -52,5 +52,14 @@
     "experience": "15 years",
     "availability": "Mon - Wed (10:00 AM - 6:00 PM)",
     "url": "../images/doctors/nitin.png"
+  },
+  {
+    "name": "Dr. Ram Prasad",
+    "gender": "Male",
+    "qualification": "MBBS, MD",
+    "specialization": "ENT",
+    "experience": "10 years",
+    "availability": "Mon - Wed (7:00 AM - 11:00 AM)",
+    "url": "../images/doctors/sushilderek.png"
   }
 ]

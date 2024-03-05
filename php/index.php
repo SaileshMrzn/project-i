@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
+if(isset($_SESSION['user_loggedin']) || $_SESSION['user_loggedin']==true){
     $login=true;
 }else{
-  header("location: login.php");
+  header("location: logout.php");
 }
 
 ?>
@@ -73,7 +73,16 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
             </h2>
             <div class="aboutInsideContent">
                 <i class="fa-regular fa-circle-xmark fa-lg closeBtn" data-close></i>
-                <p>Created On: 1st May - 18th May <br /></p>
+                <p>
+                    Tribhuwan University <br />
+                    BCA 4th Semester Project <br />
+                </p>
+                <p>
+                    Himalaya College of Engineering <br />
+                    Chyasal, Lalitpur <br />
+                </p>
+                <p>Created On:<br />
+                    18th May <br /></p>
                 <p>
                     Team Members: <br />
                     <a href="">Aman Shahi</a>,
@@ -100,8 +109,6 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
                     Leave us your queries below <br />
                     <a
                         href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZBLBjtWkJvVdGNnTxWNvVsjHWWNmfvFDRvZbCgdKJvhRBXcdZBCsJRHbzjthqpMQlQnvW">support.ascare@gmail.com</a><br />
-                    Or call us at <br />
-                    <a href="" style="text-decoration: none">16600186430</a>
                 </p>
                 <p>We will be happy to help you.</p>
             </div>
@@ -116,7 +123,7 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
             margin-bottom: 5px;
             border-bottom: 1px solid black;
           ">
-                Contact
+                Contact Developers
             </h2>
             <i class="fa-regular fa-circle-xmark fa-lg closeBtn" data-close></i>
             <div class="contactInsideContent">
@@ -130,15 +137,13 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
                     <i class="fa fa-phone"></i>
                     Phone: <br />
                     +977-9840510225 <br />
-                    +977-9840510225 <br />
-                    +977-9840510225 <br />
+                    +977-9861988711 <br />
                 </p>
                 <p>
                     <i class="fa fa-envelope"></i>
                     Email: <br />
                     <a href="">shailesh.mrzn@gmail.com</a> <br />
-                    <a href="">shailesh.mrzn@gmail.com</a> <br />
-                    <a href="">shailesh.mrzn@gmail.com</a> <br />
+                    <a href="">shahiaman098@gmail.com</a> <br />
                 </p>
                 <div class="connect">
                     Connect with us:<br />

@@ -12,8 +12,8 @@
 }
 
 #signup {
-  width: 21rem;
-  height: 28rem;
+  width: 23rem;
+  height: 33rem;
   background: white;
   border-radius: 10px;
   padding: 15px 0;
@@ -81,4 +81,14 @@
   display: flex;
   align-items: center;
   padding: 10px;
+}
+
+#type {
+  border-radius: 10px;
+  border: 1px solid grey;
+  height: 2rem;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 5px;
+  font-size: 13px;
 }
